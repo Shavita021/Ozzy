@@ -13,17 +13,12 @@
 
 Route::get('/', function()
 {
-	return View::make('index');
+	return View::make('hello');
 });
-
-Route::post('login', array('uses' => 'systemController@login'));
-
 
 Route::resource('adminMaestro', 'adminMaestroController');
 
 Route::resource('adminSecundario', 'adminSecundarioController');
-
-Route::resource('usuarioNormal', 'usuarioNormalController');
 
 ?>
 

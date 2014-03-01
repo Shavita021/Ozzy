@@ -13,13 +13,8 @@
 
 Route::get('/', function()
 {
-	return View::make('index');
+	return View::make('hello');
 });
-
-Route::post('login', array('uses' => 'systemController@login'));
-
-Route::get('logout', array('uses' => 'systemController@logout'));
-
 
 Route::resource('adminMaestro', 'adminMaestroController');
 
