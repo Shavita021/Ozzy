@@ -4,7 +4,7 @@
 <html>
 <head>
 	<title>Maestro</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container">
@@ -19,7 +19,7 @@
 	</ul>
 </nav>
 
-<h1>Maestros</h1>
+<h1>All the Admins</h1>
 
 <!-- will be used to show any messages -->
 @if (Session::has('message'))
@@ -37,7 +37,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	@foreach($adminMaestros as $value)
+	@foreach($adminMaestros as $key => $value)
 		<tr>
 			<td>{{ $value->id }}</td>
 			<td>{{ $value->name }}</td>

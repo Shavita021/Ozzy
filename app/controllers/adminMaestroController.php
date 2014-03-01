@@ -112,13 +112,7 @@ class adminMaestroController extends \BaseController {
 			'email'      => 'required|email',
 			'phone_number' => 'required|numeric'
 		);
-		
-		$messages = array(
-    'required' => 'El :attribute es requerido.',
-    'numeric' => 'El :attribute deben ser numeros.',
-    );
-
-		$validator = Validator::make(Input::all(), $rules, $messages);
+		$validator = Validator::make(Input::all(), $rules);
 
 		// process the login
 		if ($validator->fails()) {
@@ -155,6 +149,5 @@ class adminMaestroController extends \BaseController {
 		Session::flash('message', 'Successfully deleted the nerd!');
 		return Redirect::to('adminMaestro');
 	}
-
 
 }

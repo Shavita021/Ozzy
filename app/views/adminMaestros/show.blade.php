@@ -1,9 +1,5 @@
 <!-- app/views/nerds/show.blade.php -->
-@if((Session::get('autorizacion')) != 'si') 
-{{	header("Location: /");
-	exit();
-	}}
-@else
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,15 +15,10 @@
 	</div>
 	<ul class="nav navbar-nav">
 		<li><a href="{{ URL::to('adminMaestro') }}">View All Nerds</a></li>
-		<li><a href="{{ URL::to('adminMaestro/create') }}">Create a Nerd</a></li>
+		<li><a href="{{ URL::to('adminMaestro/create') }}">Create a Nerd</a>
 	</ul>
 </nav>
 
-  <a class="btn btn-default btn-lg" href="{{ URL::action('systemController@logout') }}">
-	  <span class="glyphicon glyphicon-log-out"></span>
-	</a>
-	
-	
 <h1>Showing {{ $adminMaestro->name }}</h1>
 
 	<div class="jumbotron text-center">
@@ -41,4 +32,3 @@
 </div>
 </body>
 </html>
-@endif
